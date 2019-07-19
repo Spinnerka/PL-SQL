@@ -2,7 +2,7 @@ set echo on
 spool e:setup.txt
 
 /* ---------------
-   Create table structure for IS 480 class
+   Create table structure for enrollment system and populate test data
    --------------- */
 
 drop table waitlist;
@@ -140,7 +140,7 @@ insert into Waitlist values (105,10125, sysdate-.41);
 
 -----------------------------------------------------------------------------
 -----------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------
 
 
 
@@ -148,7 +148,7 @@ insert into Waitlist values (105,10125, sysdate-.41);
 
 create or replace package Enroll is
 
--- add me section
+-- procedures to check to see if the students can enroll in course
 
 procedure Validate_Student
 	(p_snum students.snum%type, p_Error_Text out varchar2);
@@ -194,7 +194,7 @@ procedure AddMe
 --------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------
 
--- drop my section
+-- procedures for when a student drops a course
 
 procedure Not_Enrolled
 	(p_snum enrollments.snum%type, p_callnum schclasses.callnum%type,
