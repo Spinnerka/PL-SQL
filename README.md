@@ -1,5 +1,5 @@
 # PLSQL
-This was my final project for my Advanced Database classs from California State University Long Beach.
+This was my final project for my Advanced Database class from California State University Long Beach.
 
 This program is set up to allow a student to enroll in a class.
 
